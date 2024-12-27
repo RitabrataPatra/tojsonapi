@@ -22,7 +22,8 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans">
       <main className="flex-1 px-6 py-10 bg-gray-100 text-slate-600">
-        
+
+        {/* About the API */}
         <section className="max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl font-semibold mb-4">About the API</h2>
           <p className="text-gray-700">
@@ -33,6 +34,8 @@ const Home: React.FC = () => {
           </p>
         </section>
 
+
+        {/* How It Works */}
         <section className="max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl font-semibold mb-4">How It Works</h2>
           <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -46,6 +49,7 @@ const Home: React.FC = () => {
           </ol>
         </section>
 
+        {/* Example Request */}
         <section className="max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl font-semibold mb-4">Example Request</h2>
           <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
@@ -59,6 +63,7 @@ const Home: React.FC = () => {
           </pre>
         </section>
 
+         {/* Example Response */}
         <section className="max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl font-semibold mb-4">Example Response</h2>
           <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
@@ -68,7 +73,8 @@ const Home: React.FC = () => {
 }`}
           </pre>
         </section>
-
+        
+        {/* API Endpoint */}
         <section className="max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl font-semibold mb-4">API Endpoint</h2>
           <div className="flex items-center space-x-4">
@@ -90,7 +96,8 @@ const Home: React.FC = () => {
             </button>
           </div>
         </section>
-
+        
+        {/* Contact Us */}
         <section className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <p className="text-gray-700">
