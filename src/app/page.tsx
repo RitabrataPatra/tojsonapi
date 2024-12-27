@@ -1,34 +1,28 @@
 "use client";
-import { GithubIcon } from "lucide-react";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+const postlink = "https://localhost:3000/api/json";
 const Home: React.FC = () => {
   const [copySuccess, setCopySuccess] = useState<string>("");
 
   const copyToClipboard = () => {
     navigator.clipboard
-      .writeText("https://yourapi.com/process")
+      .writeText(postlink)
 
       .then(() => setCopySuccess("Copied!"))
       .catch(() => setCopySuccess("Failed to copy."));
   };
   useEffect(() => {
     if (copySuccess) {
-      const timer = setTimeout(() => setCopySuccess(''), 5000);
+      const timer = setTimeout(() => setCopySuccess(""), 5000);
       return () => clearTimeout(timer);
     }
   }, [copySuccess]);
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <header className="bg-green-600 text-white py-6">
-        <h1 className="text-4xl font-bold text-center">
-          Dynamic JSON Processing API
-        </h1>
-      </header>
-
       <main className="flex-1 px-6 py-10 bg-gray-100 text-slate-600">
+        
         <section className="max-w-4xl mx-auto mb-10">
           <h2 className="text-2xl font-semibold mb-4">About the API</h2>
           <p className="text-gray-700">
@@ -111,20 +105,6 @@ const Home: React.FC = () => {
           </p>
         </section>
       </main>
-
-      <footer className="bg-gray-900 text-white text-center py-4">
-        <p>&copy; 2024 Dynamic JSON Processing API. All rights reserved.</p>
-        <div className="flex gap-2 justify-center items-center mt-2">
-          <div className="w-fit rounded-full bg-slate-500 p-1 items-center">
-            <GithubIcon size={16}/>
-            </div>
-          
-          <p>
-          Contribute on <Link href="https://github.com/RitabrataPatra/tojsonapi" target="_blank" rel="noopener noreferrer" className="text-green-500 underline">GitHub</Link>.
-        </p>
-        </div>
-        
-      </footer>
     </div>
   );
 };
