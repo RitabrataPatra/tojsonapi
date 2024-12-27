@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z, ZodTypeAny } from "zod";
 import { EXAMPLE_ANSWER, EXAMPLE_PROMPT } from "./example";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const determineSchemaType = (schema: any): string => {
     if (!schema.hasOwnProperty("type")) {
       if (Array.isArray(schema)) {
@@ -14,6 +15,7 @@ const determineSchemaType = (schema: any): string => {
     return schema.type
   }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const jsonSchematoZod = (schema: any): ZodTypeAny => {
   const type = determineSchemaType(schema);
 
@@ -45,6 +47,7 @@ const jsonSchematoZod = (schema: any): ZodTypeAny => {
 
   type PromiseExecutor<T> = (
     resolve: (value: T) => void,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     reject: (reason?: any) => void
   ) => void;
 
