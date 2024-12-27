@@ -97,20 +97,6 @@ const Home: React.FC = () => {
           </div>
         </section>
         
-        {/* Contact Us */}
-        <section className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-          <p className="text-gray-700">
-            If you encounter any issues or have questions, feel free to{" "}
-            <a
-              href="mailto:support@yourapi.com"
-              className="text-green-600 underline"
-            >
-              contact support
-            </a>
-            .
-          </p>
-        </section>
       </main>
     </div>
   );
