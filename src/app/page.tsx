@@ -75,7 +75,7 @@ const Home: React.FC = () => {
         </section>
         
         {/* API Endpoint */}
-        <section className="max-w-4xl mx-auto mb-10">
+        <section className="max-w-4xl mx-auto mb-8">
           <h2 className="text-2xl font-semibold mb-4">API Endpoint</h2>
           <div className="flex items-center space-x-4">
             <p className="text-gray-700">
